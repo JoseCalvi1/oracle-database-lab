@@ -1,4 +1,4 @@
-# Oracle Database Lab
+# Oracle Database Lab (Training Edition Academic Version)
 Training repository for Oracle Database administration,
 testing, change management and Git workflows.
 Name: José Antonio Calvillo Olmedo
