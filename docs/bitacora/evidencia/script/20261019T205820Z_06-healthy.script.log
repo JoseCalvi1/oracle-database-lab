@@ -1,0 +1,6 @@
+== Esperando a que Oracle Database este HEALTHY ==
+Este proceso toma entre 2 y 5 minutos...
+................................
+¡Base de datos lista! Estado: healthy
+NAMES         STATUS                   PORTS
+oralab-26ai   Up 4 minutes (healthy)   0.0.0.0:1521->1521/tcp, [::]:1521->1521/tcp, 0.0.0.0:8181->8181/tcp, [::]:8181->8181/tcp
