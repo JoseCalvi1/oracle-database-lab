@@ -1,0 +1,55 @@
+=== BLOQUE 1: WSL 2 y Sistema Operativo ===
+6.18.54.1-microsoft-standard-WSL2
+Ubuntu 24.04.5 LTS
+=== BLOQUE 2: Docker Engine y Contenedor Healthy ===
+NAMES         STATUS                    PORTS
+oralab-26ai   Up 18 minutes (healthy)   0.0.0.0:1521->1521/tcp, [::]:1521->1521/tcp
+=== BLOQUE 3: Volumen Persistente ===
+DRIVER    VOLUME NAME
+local     oralab-26ai-data
+=== BLOQUE 4: Conexion a FREEPDB1 y Estado de PDB ===
+
+CON_NAME
+--------------------------------------------------------------------------------
+USER
+--------------------------------------------------------------------------------
+FREEPDB1
+ALUMNO
+
+
+=== BLOQUE 5: 5 Areas de Negocio (Tablas V000 y V001) ===
+
+TABLE_NAME
+--------------------------------------------------------------------------------
+ACCOUNTS
+DBTOOLS$EXECUTION_HISTORY
+PATIENTS
+PRODUCTS
+SHIPMENTS
+STUDENTS
+
+6 rows selected.
+
+=== BLOQUE 6: Java y SQLcl ===
+openjdk version "21.0.12.1" 2026-08-18
+SQLcl: Release 26.3.0.0 Production Build: 26.3.0.260.1620
+=== BLOQUE 7: ORDS / Database Actions Activo ===
+=== BLOQUE 8: Auditoria de Secretos (0 contraseñas expuestas) ===
+Ocurrencias ORACLE_PWD en git log: 0
+Ocurrencias APP_USER_PWD en git log: 0
+=== BLOQUE 9: Secuencia Completa de Evidencias (01 a 13) ===
+11-
+12-
+_01-
+_02-
+_03-
+_04-
+_05-
+_06-
+_07-
+_08-
+_09-
+_10-
+_12-
+_13-
+Total archivos de evidencia: 17

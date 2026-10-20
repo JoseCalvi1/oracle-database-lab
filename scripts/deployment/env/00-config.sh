@@ -13,3 +13,9 @@ export BACKUP_DIR="$(pwd)/backups"
 export EVID="docs/bitacora/evidencia"
 # Marca de tiempo ISO 8601 en UTC para nombrar la evidencia: $(ts)
 ts() { date -u +%Y%m%dT%H%M%SZ; }
+
+# Constantes ORDS (Parte M.3)
+export ORDS_HOME="$HOME/ords"
+export ORDS_CONFIG="$HOME/ords_config"
+export ORDS_LOGS="$HOME/ords_logs"
+export ORDS_PORT=8181

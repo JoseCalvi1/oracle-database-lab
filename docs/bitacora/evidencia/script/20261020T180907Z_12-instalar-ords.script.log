@@ -1,0 +1,15 @@
+== Verificando instalacion de ORDS en /home/josecalvillo/ords y configuracion en /home/josecalvillo/ords_config ==
+
+ORDS: Release 26.3 Production on Tue Oct 20 18:09:12 2026
+
+Copyright (c) 2010, 2026, Oracle.
+
+Configuration:
+  /home/josecalvillo/ords_config
+
+Oracle REST Data Services 26.3.0.r2721811
+total 16
+drwxr-xr-x 3 josecalvillo josecalvillo 4096 Oct 20 13:47 .
+drwxr-xr-x 3 josecalvillo josecalvillo 4096 Oct 20 13:47 ..
+-rw-r--r-- 1 josecalvillo josecalvillo  586 Oct 20 13:47 pool.xml
+drwxr-xr-x 2 josecalvillo josecalvillo 4096 Oct 20 13:47 wallet

@@ -1,0 +1,4 @@
+== Verificando servicio ORDS en puerto 8181 ==
+1288 bash scripts/deployment/env/12-arrancar-ords.sh
+1289 tee docs/bitacora/evidencia/script/20261020T180913Z_12-arrancar-ords.script.log
+1292 bash scripts/deployment/env/12-arrancar-ords.sh
