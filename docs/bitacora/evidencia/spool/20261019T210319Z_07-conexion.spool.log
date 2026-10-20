@@ -1,0 +1,14 @@
+
+INSTANCE_NAME	 HOST_NAME							  VERSION	    STATUS
+---------------- ---------------------------------------------------------------- ----------------- ------------
+FREE		 573e0d7a6981							  23.0.0.0.0	    OPEN
+
+1 row selected.
+
+
+NAME	  OPEN_MODE	       LOG_MODE
+--------- -------------------- ------------
+FREE	  READ WRITE	       ARCHIVELOG
+
+1 row selected.
+
