@@ -2,8 +2,8 @@
 6.18.54.1-microsoft-standard-WSL2
 Ubuntu 24.04.5 LTS
 === BLOQUE 2: Docker Engine y Contenedor Healthy ===
-NAMES         STATUS                    PORTS
-oralab-26ai   Up 44 minutes (healthy)   0.0.0.0:1521->1521/tcp, [::]:1521->1521/tcp
+NAMES         STATUS                 PORTS
+oralab-26ai   Up 4 hours (healthy)   0.0.0.0:1521->1521/tcp, [::]:1521->1521/tcp
 === BLOQUE 3: Volumen Persistente ===
 DRIVER    VOLUME NAME
 local     oralab-26ai-data
@@ -34,6 +34,7 @@ STUDENTS
 openjdk version "21.0.12.1" 2026-08-18
 SQLcl: Release 26.3.0.0 Production Build: 26.3.0.260.1620
 === BLOQUE 7: ORDS / Database Actions Activo ===
+HTTP/1.1 200 OK
 === BLOQUE 8: Auditoria de Secretos (0 contraseñas expuestas) ===
 Ocurrencias ORACLE_PWD en git log: 0
 Ocurrencias APP_USER_PWD en git log: 0
