@@ -28,7 +28,7 @@ java -version 2>&1 | head -n 1
 sql -version
 
 echo "=== BLOQUE 7: ORDS / Database Actions Activo ==="
-curl -s -I "http://localhost:${ORDS_PORT}/ords/" | head -n 1
+curl -s -I "http://localhost:${ORDS_PORT}/ords/alumno/_sdw/" | head -n 1
 
 echo "=== BLOQUE 8: Auditoria de Secretos (0 contraseñas expuestas) ==="
 echo "Ocurrencias ORACLE_PWD en git log: $(git log -p | grep -c -F "$ORACLE_PWD" || true)"

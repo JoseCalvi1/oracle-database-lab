@@ -1,0 +1,6 @@
+== Verificando servicio ORDS en puerto 8181 ==
+HTTP/1.1 200 OK
+Content-Type: text/html
+Vary: Accept-Language
+ETag: "zU/Aq/IKwSh/L58CSUA42kCsWHGutiKJW35j1Qm2dc3vyifLENKihJ4snlPr0laXCBsqP4ercHVH44v+J+h8Gw=="
+Cache-Control: public,max-age=86400

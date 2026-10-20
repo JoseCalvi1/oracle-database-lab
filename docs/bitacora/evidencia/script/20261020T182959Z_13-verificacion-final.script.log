@@ -3,7 +3,7 @@
 Ubuntu 24.04.5 LTS
 === BLOQUE 2: Docker Engine y Contenedor Healthy ===
 NAMES         STATUS                    PORTS
-oralab-26ai   Up 18 minutes (healthy)   0.0.0.0:1521->1521/tcp, [::]:1521->1521/tcp
+oralab-26ai   Up 38 minutes (healthy)   0.0.0.0:1521->1521/tcp, [::]:1521->1521/tcp
 === BLOQUE 3: Volumen Persistente ===
 DRIVER    VOLUME NAME
 local     oralab-26ai-data
