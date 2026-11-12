@@ -1,0 +1,9 @@
+SQL Format Cleared
+
+FIRMA                                    CURSORES_DISTINTOS EJECUCIONES_TOTALES KB_SHARED_POOL
+---------------------------------------- ------------------ ------------------- --------------
+EJEMPLO_SQL                                                                          
+-------------------------------------------------------------------------------------
+1863221789280198928                                    1000                1000          38845 
+SELECT /* lab4_literal */ COUNT(*) FROM admin_academia.aca_estudiantes WHERE estudian
+

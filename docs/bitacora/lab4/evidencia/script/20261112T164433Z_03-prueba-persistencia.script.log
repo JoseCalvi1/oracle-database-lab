@@ -1,0 +1,74 @@
+== 1. ANTES: entornos de negocio ==
+
+TABLESPACE_NAM FILE_NAME						  MB ONLINE_S
+-------------- -------------------------------------------------- ---------- --------
+TBS_ACADEMIA   /opt/oracle/oradata/FREE/FREEPDB1/academia01.dbf 	 100 ONLINE
+TBS_CLINICA    /opt/oracle/oradata/FREE/FREEPDB1/clinica01.dbf		 100 ONLINE
+TBS_FINTECH    /opt/oracle/oradata/FREE/FREEPDB1/fintech01.dbf		 100 ONLINE
+TBS_LOGISTICA  /opt/oracle/oradata/FREE/FREEPDB1/logistica01.dbf	 100 ONLINE
+TBS_RETAIL     /opt/oracle/oradata/FREE/FREEPDB1/retail01.dbf		 100 ONLINE
+
+OWNER		     TABLAS
+---------------- ----------
+ADMIN_ACADEMIA		  3
+ADMIN_CLINICA		  1
+ADMIN_FINTECH		  1
+ADMIN_LOGISTICA 	  1
+ADMIN_RETAIL		  1
+
+ESTUDIANTES ESTADO_FILA_101
+----------- ---------------
+	  0
+== 2. Parada limpia (SHUTDOWN IMMEDIATE) y borrado del contenedor; el volumen oralab-26ai-data se conserva ==
+Database closed.
+Database dismounted.
+ORACLE instance shut down.
+oralab-26ai
+DRIVER    VOLUME NAME
+local     oralab-26ai-data
+== 3. Recrear el contenedor con la definición corregida ==
+El volumen oralab-26ai-data ya contiene la base FREE: se reutiliza (sin contraseñas).
+b753678e408f77c34a77d7e6874ace6eafbe7ef72eea4d0101d3f64a2a714956
+Contenedor oralab-26ai creado.
+CONTAINER ID   IMAGE                                                COMMAND                  CREATED         STATUS                                     PORTS                                         NAMES
+b753678e408f   container-registry.oracle.com/database/free:latest   "/bin/bash -c $SCRIP…"   3 seconds ago   Up Less than a second (health: starting)   0.0.0.0:1521->1521/tcp, [::]:1521->1521/tcp   oralab-26ai
+  t=0s  docker=starting  cdb/pdb=no-disponible
+  t=10s  docker=starting  cdb/pdb=no-disponible
+  t=20s  docker=starting  cdb/pdb=no-disponible
+  t=30s  docker=starting  cdb/pdb=no-disponible
+  t=40s  docker=starting  cdb/pdb=no-disponible
+  t=50s  docker=starting  cdb/pdb=no-disponible
+  t=60s  docker=starting  cdb/pdb=no-disponible
+  t=70s  docker=starting  cdb/pdb=no-disponible
+  t=80s  docker=starting  cdb/pdb=no-disponible
+  t=90s  docker=starting  cdb/pdb=no-disponible
+  t=100s  docker=starting  cdb/pdb=READWRITE/MOUNTED
+  t=110s  docker=starting  cdb/pdb=READWRITE/MOUNTED
+  t=120s  docker=starting  cdb/pdb=READWRITE/MOUNTED
+  t=130s  docker=starting  cdb/pdb=READWRITE/MOUNTED
+  t=140s  docker=starting  cdb/pdb=READWRITE/MOUNTED
+  t=150s  docker=healthy  cdb/pdb=READWRITE/READWRITE
+== 4. DESPUÉS: mismos entornos, mismos datos ==
+
+TABLESPACE_NAM FILE_NAME						  MB ONLINE_S
+-------------- -------------------------------------------------- ---------- --------
+TBS_ACADEMIA   /opt/oracle/oradata/FREE/FREEPDB1/academia01.dbf 	 100 ONLINE
+TBS_CLINICA    /opt/oracle/oradata/FREE/FREEPDB1/clinica01.dbf		 100 ONLINE
+TBS_FINTECH    /opt/oracle/oradata/FREE/FREEPDB1/fintech01.dbf		 100 ONLINE
+TBS_LOGISTICA  /opt/oracle/oradata/FREE/FREEPDB1/logistica01.dbf	 100 ONLINE
+TBS_RETAIL     /opt/oracle/oradata/FREE/FREEPDB1/retail01.dbf		 100 ONLINE
+
+OWNER		     TABLAS
+---------------- ----------
+ADMIN_ACADEMIA		  3
+ADMIN_CLINICA		  1
+ADMIN_FINTECH		  1
+ADMIN_LOGISTICA 	  1
+ADMIN_RETAIL		  1
+
+ESTUDIANTES ESTADO_FILA_101
+----------- ---------------
+	  0
+== 5. Puertos publicados ahora (ya no aparece 8181) ==
+1521/tcp -> 0.0.0.0:1521
+1521/tcp -> [::]:1521
