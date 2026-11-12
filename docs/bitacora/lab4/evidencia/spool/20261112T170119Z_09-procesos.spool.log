@@ -1,0 +1,53 @@
+SQL Format Cleared
+
+== 1. Cuántos procesos tiene la instancia y de qué tipo ==
+
+TIPO        PROCESOS_ORACLE PROCESOS_LINUX
+----------- --------------- --------------
+background               89             56
+servidor                  4              4
+
+== 2. Los procesos obligatorios y los que verás en el examen (v$bgprocess + v$process) ==
+
+PNAME  SPID     DESCRIPTION                                     
+------ -------- ------------------------------------------------
+PMON   2341     process cleanup                                 
+LREG   2407     Listener Registration                           
+SMON   2398     System Monitor Process                          
+DBW0   2387     db writer process 0                             
+LGWR   2390     Redo etc.                                       
+CKPT   2395     checkpoint                                      
+MMON   2416     Manageability Monitor Process                   
+MMNL   2419     Manageability Monitor Process 2                 
+RECO   2405     distributed recovery                            
+ARC0   2526     Archival Process 0                              
+CJQ0   2759     Job Queue Coordinator                           
+CLMN   2345     process cleanup                                 
+DIA0   2385     diagnosibility process 0                        
+DIAG   2371     diagnosibility process                          
+MMAN   2363     Memory Manager                                  
+PMAN   2383     process manager                                 
+PSP0   2349     process spawner 0                               
+VKTM   2353     Virtual Keeper of TiMe process                  
+
+== 3. ¿Hay archivador (ARCn)? En NOARCHIVELOG no debería aparecer ==
+
+PROCESOS_ARCN
+-------------
+            4
+
+== 4. Mi sesión y el proceso servidor que la atiende (arquitectura de servidor dedicado) ==
+
+       SID    SERIAL# USERNAME     MACHINE        PROGRAM                            SPID    
+---------- ---------- ------------ -------------- ---------------------------------- --------
+       224      19534 C##OPS_RO    DESKTOP-VR7IPJ SQLcl                              3076    
+                                   J                                                         
+
+
+== 5. Todas las sesiones de usuario ahora mismo ==
+
+       SID USERNAME     STATUS   MACHINE        PROGRAM                            SPID    
+---------- ------------ -------- -------------- ---------------------------------- --------
+       224 C##OPS_RO    ACTIVE   DESKTOP-VR7IPJ SQLcl                              3076    
+                                 J                                                         
+

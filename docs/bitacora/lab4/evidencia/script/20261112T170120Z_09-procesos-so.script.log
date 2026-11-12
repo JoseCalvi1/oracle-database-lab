@@ -1,0 +1,18 @@
+== 1. Procesos de background clave (compara el PID con SPID de 09-procesos.sql) ==
+2341     85         db_pmon_FREE 
+2387     96         db_dbw0_FREE 
+2390     103        db_lgwr_FREE 
+2395     100        db_ckpt_FREE 
+2398     86         db_smon_FREE 
+2405     108        db_reco_FREE 
+2407     123        db_lreg_FREE 
+2416     290        db_mmon_FREE 
+2419     85         db_mmnl_FREE 
+== 2. Recuento por tipo ==
+   background (db_*_FREE / ora_*_FREE): 59
+   servidor dedicado (oracleFREE):       0
+   listener (tnslsnr):                   1
+== 3. Procesos servidor: LOCAL=NO llega por red (listener), LOCAL=YES es bequeath (docker exec ... / as sysdba) ==
+   (ninguno: abre una sesión SQLcl en otra terminal y repite)
+== 4. El proceso con SPID 2390 ==
+2390     103        db_lgwr_FREE 
