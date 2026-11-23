@@ -1,0 +1,52 @@
+== 1. Copia previa al simulacro ==
+== Copia terminada ==
+1.3G	backups/20261123T155838Z_lab5-pre-simulacro
+Para restaurarla: bash scripts/ops/restaurar-estado.sh backups/20261123T155838Z_lab5-pre-simulacro
+Matrículas antes: 60000
+== 2. Error humano leve: DROP TABLE sin PURGE -> FLASHBACK TABLE ... TO BEFORE DROP ==
+
+Session altered.
+
+
+Table dropped.
+
+
+ORIGINAL_NAME	 OBJECT_NAME			  TYPE	 DROPTIME
+---------------- -------------------------------- ------ -------------------
+ACA_MATRICULAS	 BIN$YPS66A8LAsrgYwIAEax/VQ==$0   TABLE  2026-11-23:16:03:09
+UQ_ACA_MATRICULA BIN$YPS66A8JAsrgYwIAEax/VQ==$0   INDEX  2026-11-23:16:03:09
+_UNICA
+
+SYS_C009003	 BIN$YPS66A8KAsrgYwIAEax/VQ==$0   INDEX  2026-11-23:16:03:09
+
+3 rows selected.
+
+
+Flashback complete.
+
+Matrículas tras FLASHBACK TABLE: 60000
+== 3. Error humano grave: DROP TABLE ... PURGE (sin papelera) ==
+
+Session altered.
+
+
+Table dropped.
+
+Matrículas ahora: ORA-00942: table or view ADMIN_ACADEMIA.ACA_MATRICULAS does not exist
+== 4. Restauración de la copia, cronometrada ==
+------------ ----------
+PDB$SEED     READ ONLY
+FREEPDB1     READ WRITE
+
+OWNER																     TABLAS
+-------------------------------------------------------------------------------------------------------------------------------- ----------
+ADMIN_ACADEMIA																  3
+ADMIN_CLINICA																  1
+ADMIN_FINTECH																  1
+ADMIN_LOGISTICA 															  1
+ADMIN_RETAIL																  1
+== Restauración terminada: estado de «lab5-pre-simulacro» ==
+Matrículas tras restaurar: 60000
+== 5. Métricas del simulacro ==
+  RPO (datos perdidos): todo lo hecho en los 4 s entre la copia y el fallo
+  RTO (tiempo de restauración): 215 s
